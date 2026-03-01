@@ -531,11 +531,26 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
             h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .goal-input {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .timer-box {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px !important;
             }
         }
     </style>
@@ -770,7 +785,7 @@
     <section>
         <h2>AI Must Follow Human Values 🤖🕌</h2>
         <p>Islam teaches balance — technology is a tool, not a replacement for faith.</p>
-        <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
             <div class="card" style="text-align: center;">
                 <div class="icon">❤️</div>
                 <h3>Intention (Niat)</h3>
@@ -794,9 +809,12 @@
         <div class="floating-goals" id="goalSpace"></div>
         <h2>Ramadhan is Still About the Heart</h2>
         <p>AI helps planning, but sincerity comes from humans. Ramadhan = reconnect with Allah & self.</p>
-        <div style="margin-top: 30px; display: flex; gap: 10px; z-index: 10;">
-            <input type="text" id="goalInput" class="goal-input" placeholder="Write your Ramadhan goals / prayers...">
-            <button class="btn" style="margin-top: 0; padding: 15px 25px;" onclick="addGoal()">Release Prayer ✨</button>
+        <div
+            style="margin-top: 30px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; z-index: 10; width: 100%; padding: 0 15px; box-sizing: border-box;">
+            <input type="text" id="goalInput" class="goal-input" style="max-width: 100%; box-sizing: border-box;"
+                placeholder="Write your Ramadhan goals / prayers...">
+            <button class="btn" style="margin-top: 0; padding: 15px 25px; white-space: nowrap;"
+                onclick="addGoal()">Release Prayer ✨</button>
         </div>
         <div class="prayers-wall" id="prayersWall"></div>
     </section>
@@ -812,62 +830,62 @@
     <div id="sahurModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('sahurModal')">&times;</span>
-            <img src="sahur_recipe.png" alt="30 Hari Resipi Sahur Sihat">
+            <img src="assets/sahur_recipe.png" alt="30 Hari Resipi Sahur Sihat">
         </div>
     </div>
     <div id="iftarModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('iftarModal')">&times;</span>
-            <img src="iftar_recipe.png" alt="30 Menu Sihat Berbuka Puasa">
+            <img src="assets/iftar_recipe.png" alt="30 Menu Sihat Berbuka Puasa">
         </div>
     </div>
     <div id="hydrationModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('hydrationModal')">&times;</span>
-            <img src="healthy_hydration.png" alt="Jadual Minum Air">
+            <img src="assets/healthy_hydration.png" alt="Jadual Minum Air">
         </div>
     </div>
     <div id="energyModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('energyModal')">&times;</span>
-            <img src="healthy_body.png" alt="Rahsia Badan Cergas">
+            <img src="assets/healthy_body.png" alt="Rahsia Badan Cergas">
         </div>
     </div>
     <div id="dietModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('dietModal')">&times;</span>
-            <img src="healthy_eating.png" alt="8 Amalan Pemakanan Sihat">
+            <img src="assets/healthy_eating.png" alt="8 Amalan Pemakanan Sihat">
         </div>
     </div>
     <div id="datesModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('datesModal')">&times;</span>
-            <img src="healthy_dates.png" alt="Dunia Kurma">
+            <img src="assets/healthy_dates.png" alt="Dunia Kurma">
         </div>
     </div>
 
     <div id="teraweehPanduanModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('teraweehPanduanModal')">&times;</span>
-            <img src="teraweeh_guide.png" alt="Teraweeh Prayer Guide">
+            <img src="assets/teraweeh_guide.png" alt="Teraweeh Prayer Guide">
         </div>
     </div>
     <div id="teraweehSurahModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('teraweehSurahModal')">&times;</span>
-            <img src="surah_arrangement.png" alt="Teraweeh Surah Arrangement">
+            <img src="assets/surah_arrangement.png" alt="Teraweeh Surah Arrangement">
         </div>
     </div>
     <div id="khatamModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('khatamModal')">&times;</span>
-            <img src="khatam_challenge.jpg" alt="Khatam Quran 30 Days Challenge">
+            <img src="assets/khatam_challenge.jpg" alt="Khatam Quran 30 Days Challenge">
         </div>
     </div>
     <div id="zakatModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('zakatModal')">&times;</span>
-            <img src="zakat_rates.jpg" alt="Zakat Rates">
+            <img src="assets/zakat_rates.jpg" alt="Zakat Rates">
         </div>
     </div>
 
@@ -1105,6 +1123,5 @@
         }
     </script>
 </body>
-
 
 </html>
